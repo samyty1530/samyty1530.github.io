@@ -1,151 +1,135 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+
+/* Products Page (products.html) */
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2487.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Simple Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            margin-left: 1rem;
+        }
+        .logo a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        nav {
+            background: #555;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            padding: 0.5rem 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            top: 100%;
+            left: 0;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .path-bar {
+            background-color: #eee;
+            padding: 10px;
+            font-size: 14px;
+        }
+        .path-bar a {
+            text-decoration: none;
+            color: #333;
+        }
+        .path-bar a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 2rem;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-<p class="p1"><br></p>
-<p class="p2">/* Products Page (products.html) */</p>
-<p class="p2">&lt;!DOCTYPE html&gt;</p>
-<p class="p2">&lt;html lang="en"&gt;</p>
-<p class="p2">&lt;head&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>&lt;title&gt;Products - Simple Website&lt;/title&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>body {</p>
-<p class="p2"><span class="Apple-converted-space">            </span>font-family: Arial, sans-serif;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>margin: 0;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>padding: 0;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>line-height: 1.6;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span>header {</p>
-<p class="p2"><span class="Apple-converted-space">            </span>background: #333;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>color: #fff;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>padding: 1rem 0;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>display: flex;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>align-items: center;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>justify-content: space-between;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span>.logo {</p>
-<p class="p2"><span class="Apple-converted-space">            </span>margin-left: 1rem;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span>.logo a {</p>
-<p class="p2"><span class="Apple-converted-space">            </span>color: #fff;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>text-decoration: none;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>font-size: 1.5rem;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>font-weight: bold;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span>nav {</p>
-<p class="p2"><span class="Apple-converted-space">            </span>background: #555;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>color: #fff;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>display: flex;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>justify-content: center;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>gap: 1rem;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>padding: 0.5rem 0;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span>nav a {</p>
-<p class="p2"><span class="Apple-converted-space">            </span>color: #fff;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>text-decoration: none;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span>.dropdown {</p>
-<p class="p2"><span class="Apple-converted-space">            </span>position: relative;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>display: inline-block;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span>.dropdown-content {</p>
-<p class="p2"><span class="Apple-converted-space">            </span>display: none;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>position: absolute;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>background-color: #f9f9f9;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>min-width: 160px;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);</p>
-<p class="p2"><span class="Apple-converted-space">            </span>z-index: 1;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>top: 100%;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>left: 0;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span>.dropdown-content a {</p>
-<p class="p2"><span class="Apple-converted-space">            </span>color: black;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>padding: 12px 16px;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>text-decoration: none;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>display: block;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span>.dropdown-content a:hover {</p>
-<p class="p2"><span class="Apple-converted-space">            </span>background-color: #f1f1f1;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span>.dropdown:hover .dropdown-content {</p>
-<p class="p2"><span class="Apple-converted-space">            </span>display: block;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span>.path-bar {</p>
-<p class="p2"><span class="Apple-converted-space">            </span>background-color: #eee;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>padding: 10px;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>font-size: 14px;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span>.path-bar a {</p>
-<p class="p2"><span class="Apple-converted-space">            </span>text-decoration: none;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>color: #333;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span>.path-bar a:hover {</p>
-<p class="p2"><span class="Apple-converted-space">            </span>text-decoration: underline;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span>section {</p>
-<p class="p2"><span class="Apple-converted-space">            </span>padding: 2rem;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span>.container {</p>
-<p class="p2"><span class="Apple-converted-space">            </span>max-width: 800px;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>margin: 0 auto;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span>footer {</p>
-<p class="p2"><span class="Apple-converted-space">            </span>background: #333;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>color: #fff;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>text-align: center;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>padding: 1rem 0;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>position: fixed;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>bottom: 0;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>width: 100%;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
-<p class="p2">&lt;/head&gt;</p>
-<p class="p2">&lt;body&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>&lt;header&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;div class="logo"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;a href="index.html"&gt;My Logo&lt;/a&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;nav&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;a href="index.html"&gt;Home&lt;/a&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;div class="dropdown"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                </span>&lt;a href="products.html"&gt;Products&lt;/a&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                </span>&lt;div class="dropdown-content"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                    </span>&lt;a href="webpage1.html"&gt;Webpage 1&lt;/a&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                    </span>&lt;a href="webpage2.html"&gt;Webpage 2&lt;/a&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                    </span>&lt;a href="webpage3.html"&gt;Webpage 3&lt;/a&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span>&lt;a href="contact.html"&gt;Contact Us&lt;/a&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;/nav&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>&lt;/header&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>&lt;div class="path-bar"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;a href="index.html"&gt;Home&lt;/a&gt; &gt; &lt;a href="products.html"&gt;Products&lt;/a&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>&lt;section class="container"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;h2&gt;Products&lt;/h2&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;p&gt;Explore our product offerings below!&lt;/p&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p1"><br></p>
-<p class="p2"><span class="Apple-converted-space">    </span>&lt;footer&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span>&lt;p&gt;&amp;copy; 2024 My Website. All Rights Reserved.&lt;/p&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span>&lt;/footer&gt;</p>
-<p class="p1"><br></p>
-<p class="p2">&lt;/body&gt;</p>
-<p class="p2">&lt;/html&gt;</p>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">My Logo</a>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <div class="dropdown">
+                <a href="products.html">Products</a>
+                <div class="dropdown-content">
+                    <a href="webpage1.html">Webpage 1</a>
+                    <a href="webpage2.html">Webpage 2</a>
+                    <a href="webpage3.html">Webpage 3</a>
+                </div>
+            </div>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <div class="path-bar">
+        <a href="index.html">Home</a> > <a href="products.html">Products</a>
+    </div>
+
+    <section class="container">
+        <h2>Products</h2>
+        <p>Explore our product offerings below!</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Website. All Rights Reserved.</p>
+    </footer>
+
 </body>
 </html>
