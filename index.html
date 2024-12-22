@@ -1,119 +1,78 @@
-/* Home Page (index.html) */
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Simple Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding: 1rem 0;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .logo {
-            margin-left: 1rem;
-        }
-        .logo a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-        nav {
-            background: #555;
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            padding: 0.5rem 0;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-        }
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-            top: 100%;
-            left: 0;
-        }
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-        .dropdown-content a:hover {
-            background-color: #f1f1f1;
-        }
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-        section {
-            padding: 2rem;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1rem 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    <title>Tech Microscope Solutions</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <header>
-        <div class="logo">
-            <a href="index.html">My Logo</a>
-        </div>
-        <nav>
-            <a href="index.html">Home</a>
-            <div class="dropdown">
-                <a href="products.html">Products</a>
-                <div class="dropdown-content">
-                    <a href="webpage1.html">Webpage 1</a>
-                    <a href="webpage2.html">Webpage 2</a>
-                    <a href="webpage3.html">Webpage 3</a>
-                </div>
+        <div class="top-bar">
+            <div class="top-links">
+                <a href="#">Sign In / Register</a> |
+                <a href="#">Careers</a> |
+                <a href="#">United States: English</a> |
+                <a href="#">1-888-123-4567</a>
             </div>
-            <a href="contact.html">Contact Us</a>
+        </div>
+        <nav class="main-nav">
+            <div class="logo">Tech Solutions</div>
+            <ul class="nav-links">
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Solutions</a></li>
+                <li><a href="#">Downloads</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Sustainability</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
         </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="What are you looking for?">
+        </div>
     </header>
 
-    <section class="container">
-        <h2>Landing Page</h2>
-        <p>Welcome to our amazing website! Here, you'll find everything you need to know about us and what we offer.</p>
-    </section>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>The Most Comprehensive Microscope Solution for Imaging and Analysis</h1>
+                <p><strong>NEW</strong> Digital Microscope VHX-X1 Series</p>
+            </div>
+            <div class="hero-image">
+                <img src="microscope.jpg" alt="Microscope">
+            </div>
+        </section>
+
+        <section class="products">
+            <h2>Products</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <img src="product1.jpg" alt="Product 1">
+                    <p>Product 1</p>
+                </div>
+                <div class="product-item">
+                    <img src="product2.jpg" alt="Product 2">
+                    <p>Product 2</p>
+                </div>
+                <div class="product-item">
+                    <img src="product3.jpg" alt="Product 3">
+                    <p>Product 3</p>
+                </div>
+                <div class="product-item">
+                    <img src="product4.jpg" alt="Product 4">
+                    <p>Product 4</p>
+                </div>
+                <div class="product-item">
+                    <img src="product5.jpg" alt="Product 5">
+                    <p>Product 5</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2024 My Website. All Rights Reserved.</p>
+        <p>&copy; 2024 Tech Solutions. All Rights Reserved.</p>
     </footer>
-
 </body>
 </html>
-
