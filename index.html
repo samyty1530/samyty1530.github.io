@@ -4,75 +4,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Microscope Solutions</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
-        <div class="top-bar">
-            <div class="top-links">
-                <a href="#">Sign In / Register</a> |
-                <a href="#">Careers</a> |
-                <a href="#">United States: English</a> |
-                <a href="#">1-888-123-4567</a>
+        <div class="container">
+            <div class="top-bar">
+                <div class="top-links">
+                    <a href="#">Sign In / Register</a> |
+                    <a href="#">Careers</a> |
+                    <a href="#">United States: English</a> |
+                    <a href="#">1-888-123-4567</a>
+                </div>
             </div>
-        </div>
-        <nav class="main-nav">
-            <div class="logo">Tech Solutions</div>
-            <ul class="nav-links">
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Solutions</a></li>
-                <li><a href="#">Downloads</a></li>
-                <li><a href="#">Support</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Sustainability</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-        </nav>
-        <div class="search-bar">
-            <input type="text" placeholder="What are you looking for?">
+            <nav class="main-nav sticky-nav">
+                <div class="logo">FermiVision</div>
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a href="#">Products <span class="dropdown-arrow">&#9662;</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="css/products1.html">Microscope Series</a></li>
+                            <li><a href="css/products2.html">Sensor Solutions</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Solutions <span class="dropdown-arrow">&#9662;</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="css/solutions1.html">Imaging Solutions</a></li>
+                            <li><a href="css/solutions2.html">Automation Solutions</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Downloads</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="What are you looking for?">
+                <button type="button">Search</button>
+            </div>
         </div>
     </header>
 
     <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>The Most Comprehensive Microscope Solution for Imaging and Analysis</h1>
-                <p><strong>NEW</strong> Digital Microscope VHX-X1 Series</p>
-            </div>
-            <div class="hero-image">
-                <img src="microscope.jpg" alt="Microscope">
+        <section class="hero full-width">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Innovative Microscope Solutions for Precision and Clarity</h1>
+                    <p>Explore our latest VHX-X1 Series for unmatched imaging and analysis capabilities.</p>
+                    <button class="cta-button">Learn More</button>
+                </div>
             </div>
         </section>
 
-        <section class="products">
-            <h2>Products</h2>
-            <div class="product-grid">
-                <div class="product-item">
-                    <img src="product1.jpg" alt="Product 1">
-                    <p>Product 1</p>
+        <section class="categories">
+            <div class="container">
+                <h2>Explore Our Categories</h2>
+                <div class="category-grid">
+                    <div class="category-item">
+                        <img src="category1.jpg" alt="Category 1">
+                        <p>Microscope Series</p>
+                    </div>
+                    <div class="category-item">
+                        <img src="category2.jpg" alt="Category 2">
+                        <p>Sensor Solutions</p>
+                    </div>
+                    <div class="category-item">
+                        <img src="category3.jpg" alt="Category 3">
+                        <p>Automation Systems</p>
+                    </div>
                 </div>
-                <div class="product-item">
-                    <img src="product2.jpg" alt="Product 2">
-                    <p>Product 2</p>
-                </div>
-                <div class="product-item">
-                    <img src="product3.jpg" alt="Product 3">
-                    <p>Product 3</p>
-                </div>
-                <div class="product-item">
-                    <img src="product4.jpg" alt="Product 4">
-                    <p>Product 4</p>
-                </div>
-                <div class="product-item">
-                    <img src="product5.jpg" alt="Product 5">
-                    <p>Product 5</p>
+            </div>
+        </section>
+
+        <section class="products-carousel">
+            <div class="container">
+                <h2>Featured Products</h2>
+                <div class="carousel">
+                    <div class="product-slide">
+                        <img src="product1.jpg" alt="Product 1">
+                        <p>Product 1</p>
+                    </div>
+                    <div class="product-slide">
+                        <img src="product2.jpg" alt="Product 2">
+                        <p>Product 2</p>
+                    </div>
+                    <div class="product-slide">
+                        <img src="product3.jpg" alt="Product 3">
+                        <p>Product 3</p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Tech Solutions. All Rights Reserved.</p>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> | <a href="#">Contact</a>
+            </div>
+            <div class="social-icons">
+                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+                <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+            </div>
+            <p>&copy; 2025 Tech Solutions. All Rights Reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
