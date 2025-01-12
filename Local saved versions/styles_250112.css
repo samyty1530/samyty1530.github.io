@@ -1,5 +1,5 @@
-/* Updated: 2025-01-12 06:26 PM EST - STABLE VERSION */
-/* Latest: Landing page>Trusted by done, Industries WIP*/
+/* Updated: 2025-01-12 05:07 PM EST - STABLE VERSION */
+/* Latest: Landing page>Hero added video, fixed ratios */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -191,7 +191,7 @@ header .container, .hero .container, .products .container, footer .container {
 .hero {
     position: relative; /* Allows stacking of video and content */
     width: 100%; /* Expands hero to full width of the page */
-    height: 70vh; /* 100vh Fills the viewport height */
+    height: 80vh; /* 100vh Fills the viewport height */
     display: flex; /* Centers content */
     justify-content: center;
     align-items: center;
@@ -204,7 +204,7 @@ header .container, .hero .container, .products .container, footer .container {
     top: 0;
     left: 0;
     width: 100%; /* Makes video responsive */
-    height: 100vh; /* Sets the height to 100% of the viewport, or else weird white margin appears*/
+    height: 70vh; /* Sets the height to 60% of the viewport */
     object-fit: cover; /* Crops video to fit without stretching */
     z-index: -1; /* Pushes video behind text */
 }
@@ -215,7 +215,7 @@ header .container, .hero .container, .products .container, footer .container {
     color: white; /* Makes all text white */
     font-family: Arial, sans-serif; /* Sets default font */
     margin-top: 30px; /* Space above the heading */
-
+    margin-bottom: 30px; /* Space below the paragraph */
 }
 
 /* Hero Text Styling */
@@ -255,108 +255,22 @@ header .container, .hero .container, .products .container, footer .container {
     background-color: navy; /* Darker hover effect */
 }
 
-/* Trusted-By Section */
-.trusted-by {
-    background-color: #fff; /* Matches the header's background color */
-    padding: 10px 0; /* 20px Adds spacing above/below. 0 indicates left and right spacing*/
-    text-align: center; /* Centers the text and logos */
-}
-
-.trusted-by-text {
-    font-size: 20px; /* Adjust font size for readability */
-    font-weight: 650; /* Slightly bold for emphasis */
-    color: #000; /* Black text */
-    margin-top: 50px; 
-    margin-bottom: 20px; /* Space between text and logos */
-    
-}
-
-.trusted-by-logos {
-    display: flex; /* Aligns logos in a row */
-    justify-content: center; /* Centers the logos */
-    align-items: center; /* Vertically aligns the logos */
-    gap: 30px; /* Adds spacing between the logos */
-    margin-bottom: 20px;
-}
-
-.trusted-by-logos img {
-    max-width: 150px; /* Sets a consistent max width for all logos */
-    height: auto; /* Maintains aspect ratio */
-    filter: grayscale(50%); /* Optional: Adds a grayscale effect to logos */
-    transition: filter 0.3s ease; /* Smooth hover effect */
-}
-
-.trusted-by-logos img:hover {
-    filter: grayscale(0); /* Restores color on hover */
-}
-
-/* Industries Section */
 .category-grid {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 30px;
     margin: 50px 0;
 }
 
 .category-item {
     text-align: center;
-    font-size: 16px; /* Adjust font size for readability */
-    font-weight: 550; /* Slightly bold for emphasis */
-    color: #000; /* Black text */
-    margin-top: 0; 
-    margin-bottom: 20px; /* Space between text and Featured Products*/
 }
 
 .category-item img {
-    height: 200px;
-    width: auto;
-    
+    width: 150px;
+    height: auto;
 }
 
-/* New Industries Section */
-.industries {
-    margin: 50px 0; /* Space around the section */
-    text-align: center;
-}
-
-.industry-item {
-    display: flex; /* Use flexbox for alignment */
-    align-items: center; /* Vertically align content */
-    margin: 20px 0; /* Space between items */
-    gap: 20px; /* Space between text and image */
-}
-
-.industry-item.reverse {
-    flex-direction: row-reverse; /* Reverse layout for alternating rows */
-}
-
-.industry-text {
-    flex: 1; /* Take one-third of the width */
-    font-size: 18px;
-    font-weight: bold;
-    margin: 0; /* Reset default margin */
-    text-align: left; /* Align text to the left */
-}
-
-.industry-text h4 {
-    margin-bottom: 10px; /* Space between heading and paragraph */
-}
-
-.industry-text p {
-    font-size: 16px; /* Adjust paragraph font size */
-    font-weight: normal; /* Make paragraph text lighter */
-    color: #555; /* Neutral text color */
-}
-
-.industry-img {
-    flex: 2; /* Take two-thirds of the width */
-    max-width: 100%; /* Ensure responsiveness */
-    height: auto; /* Maintain aspect ratio */
-}
-
-
-
-/* Featured Products Section */
 .carousel {
     display: flex;
     overflow: hidden;
