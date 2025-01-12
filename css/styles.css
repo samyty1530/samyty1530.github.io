@@ -1,4 +1,5 @@
-/* Updated: 2025-01-07 10:00 AM EST */
+/* Updated: 2025-01-12 05:07 PM EST - STABLE VERSION */
+/* Latest: Landing page>Hero added video, fixed ratios */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -11,9 +12,9 @@ body {
 }
 
 header {
-    background-color: #f4f4f4;
-    padding: 10px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* Removes container outline */
+    box-shadow: none; /* Removes shadow */
+    padding: 10px 0; /* Adjust header spacing if needed */
 }
 
 header .container, .hero .container, .products .container, footer .container {
@@ -21,7 +22,23 @@ header .container, .hero .container, .products .container, footer .container {
     max-width: 1200px;
     margin: 0 auto;
 }
-/* header logo */
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    margin-right: 20px;
+    margin-right: 10px;
+}
+
+.main-nav .logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: darkblue;
+}
+
+/* main-nav logo */
 .logo-container {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -58,63 +75,44 @@ header .container, .hero .container, .products .container, footer .container {
     color: #333;
 }
 
-/* replace */
-.top-bar {
-    display: flex;
-    justify-content: flex-end;
-    padding-bottom: 0px;
-}
-
+/*  */
 .header-right {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
+    display: flex; /* Makes the container a flexbox */
+    flex-direction: column; /* Stacks top-links and nav-links vertically */
+    align-items: flex-end; /* Aligns both sections to the right edge */
+    gap: 10px; /* Adds spacing between top-links and nav-links */
 }
 
-.top-links a {
-    text-decoration: none;
-    color: #555;
-    margin: 0 10px;
-    font-size: 14px;
-    margin-bottom: 20px;
-    margin-right: 20px;
-    margin-top: 20px;
+.top-links {
+    display: flex; /* Makes links inside align horizontally */
+    justify-content: flex-end; /* Aligns the links to the right within the container */
+    margin: 0; /* Removes any unwanted bottom margin */
 }
 
-.main-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fff;
-    margin-right: 20px;
-    margin-right: 10px;
-}
-
-.main-nav .logo {
-    font-size: 20px;
-    font-weight: bold;
-    color: darkblue;
+.top-links a { /* -A */
+    text-decoration: none; /* Removes underlines from links */
+    color: #555; /* Sets a neutral dark gray for text */
+    margin: 0 15px; /* Adds horizontal spacing between links */
+    font-size: 14px; /* Sets a consistent font size */
 }
 
 .nav-links {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    gap: 20px;
-    justify-content: flex-end;
- 
+    list-style: none; /* Removes default bullet points for the list */
+    display: flex; /* Aligns navigation items horizontally */
+    justify-content: flex-end; /* Aligns navigation links to the right edge */
+    margin: 0; /* Removes unwanted margin around the list */
+    padding: 0; /* Removes padding for a cleaner look */
+    gap: 20px; /* Adds spacing between navigation links */
 }
 
 .nav-links li {
     position: relative;
 }
 
-.nav-links a {
+.nav-links a { /* -A */
     text-decoration: none;
     color: #333;
-    padding: 10px 15px;
+    padding: 10px 15px;/* same as .top-links a */
     display: block;
 }
 
@@ -158,7 +156,7 @@ header .container, .hero .container, .products .container, footer .container {
     top: 0;
     background-color: #fff;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: none
 }
 
 .search-bar {
@@ -189,47 +187,72 @@ header .container, .hero .container, .products .container, footer .container {
     background-color: #0056b3;
 }
 
+/* Hero Section */
 .hero {
-    display: flex;
+    position: relative; /* Allows stacking of video and content */
+    width: 100%; /* Expands hero to full width of the page */
+    height: 80vh; /* 100vh Fills the viewport height */
+    display: flex; /* Centers content */
     justify-content: center;
     align-items: center;
-    text-align: center;
-    padding: 60px 0;
-    background-color: #e9f0f7;
-    height: 400px;
-    box-sizing: border-box;
+    overflow: hidden; /* Ensures no content spills out */
 }
 
-.hero .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Video Background */
+.hero-video {
+    position: absolute; /* Positions video behind content */
+    top: 0;
+    left: 0;
+    width: 100%; /* Makes video responsive */
+    height: 70vh; /* Sets the height to 60% of the viewport */
+    object-fit: cover; /* Crops video to fit without stretching */
+    z-index: -1; /* Pushes video behind text */
 }
 
+/* Hero Content */
+.hero-content {
+    text-align: center; /* Centers text content */
+    color: white; /* Makes all text white */
+    font-family: Arial, sans-serif; /* Sets default font */
+    margin-top: 30px; /* Space above the heading */
+    margin-bottom: 30px; /* Space below the paragraph */
+}
+
+/* Hero Text Styling */
 .hero-content h1 {
-    font-size: 48px;
-    color: darkblue;
-    margin-bottom: 20px;
+    font-size: 3.5rem; /* Adjust font size */
+    font-weight: bolder; /* Makes text bold */
 }
 
 .hero-content p {
-    font-size: 20px;
-    color: #555;
-    margin-bottom: 30px;
+    font-size: 1.25rem; /* Adjust font size */
+    font-weight: 300; /* Keeps paragraph lighter. "normal". "300" makes it light text */
+}
+/* Change font 
+.hero-content h1 {
+    font-family: 'Arial', sans-serif; 
 }
 
+.hero-content p {
+    font-family: 'Georgia', serif; 
+}
+*/
+
+/* CTA Button Styling */
 .cta-button {
-    padding: 15px 30px;
-    font-size: 16px;
-    background-color: darkblue;
+    margin-top: 20px;
+    padding: 15px 20px;
+    background-color: darkblue; /* Custom button color */
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
     cursor: pointer;
 }
 
 .cta-button:hover {
-    background-color: #003f7f;
+    background-color: navy; /* Darker hover effect */
 }
 
 .category-grid {

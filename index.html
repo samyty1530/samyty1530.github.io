@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Updated: 2025-01-07 10:00 AM EST -->
+    <!-- Updated: 2025-01-12 05:07 PM EST - STABLE VERSION
+     Latest: Landing page>Hero added video, fixed ratios  -->
+     
     <header>
         <div class="container">
             <nav class="main-nav sticky-nav">
@@ -50,14 +52,19 @@
 
     <main>
         <section class="hero full-width">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>Innovative Microscope Solutions for Precision and Clarity</h1>
-                    <p>Explore our latest VHX-X1 Series for unmatched imaging and analysis capabilities.</p>
-                    <button class="cta-button">Learn More</button>
-                </div>
+            <!-- Added video background -->
+            <video autoplay muted loop class="hero-video">
+                <source src="background-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="container hero-content">
+                <h1>Pioneering the Future of Metrology Technology</h1>
+                <p>Industry-leading solutions with proprietary algorithms and advanced data processing.</p>
+                <p>Trusted partner backed by global certifications and intellectual property rights.</p>
+                <button class="cta-button">Learn More</button>
             </div>
         </section>
+    
 
         <section class="categories">
             <div class="container">
