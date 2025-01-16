@@ -1,5 +1,5 @@
-/* Updated: 2025-01-12 06:26 PM EST - STABLE VERSION */
-/* Latest: Landing page>Trusted by done, Industries WIP*/
+/* Updated: 2025-01-15 11:22 PM EST - STABLE VERSION */
+/* Latest: Landing page mostly done; bottom contacts WIP, sticky fixed */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -15,6 +15,13 @@ header {
     background-color: #fff; /* Removes container outline */
     box-shadow: none; /* Removes shadow */
     padding: 10px 0; /* Adjust header spacing if needed */
+/* Sticky func */
+    position: sticky; /* Makes the header sticky */
+    top: 0; /* Sticks the header to the top of the viewport */
+    z-index: 1000; /* Ensures the header stays above other elements */
+    background-color: #fff; /* Ensures the header has a solid background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for separation */
+
 }
 
 header .container, .hero .container, .products .container, footer .container {
@@ -30,6 +37,7 @@ header .container, .hero .container, .products .container, footer .container {
     background-color: #fff;
     margin-right: 20px;
     margin-right: 10px;
+    
 }
 
 .main-nav .logo {
@@ -260,6 +268,7 @@ header .container, .hero .container, .products .container, footer .container {
     background-color: #fff; /* Matches the header's background color */
     padding: 10px 0; /* 20px Adds spacing above/below. 0 indicates left and right spacing*/
     text-align: center; /* Centers the text and logos */
+    margin: 20px 0;
 }
 
 .trusted-by-text {
@@ -268,7 +277,6 @@ header .container, .hero .container, .products .container, footer .container {
     color: #000; /* Black text */
     margin-top: 50px; 
     margin-bottom: 20px; /* Space between text and logos */
-    
 }
 
 .trusted-by-logos {
@@ -290,7 +298,43 @@ header .container, .hero .container, .products .container, footer .container {
     filter: grayscale(0); /* Restores color on hover */
 }
 
-/* Industries Section */
+
+/* Featured Products Section */
+.products-carousel {
+
+    background: linear-gradient(to bottom, #e6e6e6, rgba(255, 255, 255, 0)); /* Light gray fading to transparent */
+    padding: 50px 20px; /* Adds spacing inside the section */
+    text-align: center;
+}
+
+.products-carousel .container{
+    margin-bottom: 0;
+}
+.carousel {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 80px 0;
+
+}
+
+.product-slide {
+    text-align: center;
+    font-size: 18px; /* Adjust font size for readability */
+    font-weight: 650; /* Slightly bold for emphasis */
+    text-decoration: underline;
+    color: #000; /* Black text */
+    margin-top: 0; 
+    margin-bottom: 20px; /* Space between text and Featured Products*/
+}
+
+.product-slide img {
+    height: 235px;
+    width: auto;
+}
+
+
+/* Old Industries Section - DELETE LATER
 .category-grid {
     display: flex;
     justify-content: center;
@@ -300,11 +344,11 @@ header .container, .hero .container, .products .container, footer .container {
 
 .category-item {
     text-align: center;
-    font-size: 16px; /* Adjust font size for readability */
-    font-weight: 550; /* Slightly bold for emphasis */
-    color: #000; /* Black text */
+    font-size: 16px; /* Adjust font size for readability 
+    font-weight: 550; /* Slightly bold for emphasis 
+    color: #000; /* Black text 
     margin-top: 0; 
-    margin-bottom: 20px; /* Space between text and Featured Products*/
+    margin-bottom: 20px; /* Space between text and Featured Products
 }
 
 .category-item img {
@@ -312,18 +356,29 @@ header .container, .hero .container, .products .container, footer .container {
     width: auto;
     
 }
+*/
 
 /* New Industries Section */
 .industries {
-    margin: 50px 0; /* Space around the section */
+    margin: 50px 0; /* Space around the section - can't see effect?*/
     text-align: center;
+    background: linear-gradient(to bottom, #e3e3e3, rgba(255, 255, 255, 0)); /* Light gray fading to transparent */
+    padding: 50px 20px; /* Adds spacing inside the section */
+    /*
+    background-image: url('bkg_blue_lens_flare.jpg'); /* Sets the background image 
+    background-size: cover; /* Ensures the image covers the entire section 
+    background-position: center; /* Centers the image 
+    background-repeat: no-repeat; /* Prevents the image from repeating 
+    padding: 50px 0; /* Adds spacing inside the section 
+    filter: brightness(0.6); /* Darkens the image directly 
+    */
 }
 
 .industry-item {
     display: flex; /* Use flexbox for alignment */
-    align-items: center; /* Vertically align content */
-    margin: 20px 0; /* Space between items */
-    gap: 20px; /* Space between text and image */
+    align-items: top; /* Vertically align content */
+    margin: 60px 0; /* Space between items */
+    gap: 30px; /* Space between text and image */
 }
 
 .industry-item.reverse {
@@ -331,11 +386,19 @@ header .container, .hero .container, .products .container, footer .container {
 }
 
 .industry-text {
-    flex: 1; /* Take one-third of the width */
-    font-size: 18px;
-    font-weight: bold;
-    margin: 0; /* Reset default margin */
-    text-align: left; /* Align text to the left */
+    flex: 1; /* Ensures text takes up 33% of the container */
+    flex-basis: 34%; /* Explicitly sets the text width to 33% */
+    font-size: 18px; /* Adjusts font size */
+    font-weight: bold; /* Makes text bold */
+    margin: 0; /* Resets default margins */
+    text-align: right; /* Aligns text content to the right */
+    letter-spacing: 0.5px; /* Adds spacing between letters */
+    word-spacing: 1px; /* Adds spacing between words */
+    line-height: 1.7; /* Adds spacing between lines (1.5x the font size) */
+}
+
+.industry-item.reverse .industry-text {
+    text-align: left; /* Aligns text to the right for reverse items */
 }
 
 .industry-text h4 {
@@ -343,35 +406,21 @@ header .container, .hero .container, .products .container, footer .container {
 }
 
 .industry-text p {
-    font-size: 16px; /* Adjust paragraph font size */
-    font-weight: normal; /* Make paragraph text lighter */
-    color: #555; /* Neutral text color */
+    font-size: 18px; /* Adjusts font size for paragraph */
+    font-weight: normal; /* Makes paragraph text lighter */
+    margin-top: 10px; /* Adds spacing between the title and paragraph */
+    color: #555; /* Neutral gray for text color */
 }
 
 .industry-img {
-    flex: 2; /* Take two-thirds of the width */
-    max-width: 100%; /* Ensure responsiveness */
-    height: auto; /* Maintain aspect ratio */
+    flex: 2; /* Ensures image takes up 66% of the container */
+    flex-basis: 66%; /* Explicitly sets the image width to 66% */
+    max-width: 66%; /* Prevents image overflow */
+    height: auto; /* Maintains image aspect ratio */
+    object-fit: cover; /* Ensures the image scales proportionally */
 }
 
 
-
-/* Featured Products Section */
-.carousel {
-    display: flex;
-    overflow: hidden;
-    justify-content: center;
-    gap: 20px;
-}
-
-.product-slide img {
-    width: 200px;
-    height: auto;
-}
-
-.products .container {
-    text-align: center;
-}
 
 footer {
     text-align: center;
