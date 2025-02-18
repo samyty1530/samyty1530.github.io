@@ -1,0 +1,114 @@
+
+/* Dropdown Container V1 */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 70%; /* Covers 70% of the webpage width */
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li a {
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f4f4f4;
+}
+
+.dropdown-arrow {
+    margin-left: 5px;
+    color: darkblue;
+}
+
+
+.dropdown {
+    position: relative; /* Ensure dropdown's position is based on the .dropdown element */
+}
+.dropdown-container {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%; /* Position below the menu */
+    left: 10%; /* Centers the dropdown (adjust based on your layout) */
+    right: 10%; /* Centers the dropdown (adjust based on your layout) */
+    width: 70%; /* Covers 70% of the webpage width */
+    background-color: #fff; /* White background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+    padding: 20px; /* Adds spacing inside the dropdown */
+    z-index: 999; /* Ensures it appears above other content */
+    border-radius: 8px; /* Optional: Rounded corners */
+    min-width: 800px; /* Ensure a reasonable minimum width */
+    max-width: none; /* Prevent unintended width restrictions */
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-container {
+    display: flex; /* Reveals the dropdown */
+    flex-direction: row; /* Aligns left and right sections side by side */
+    justify-content: space-between; /* Creates space between columns */
+}
+
+/* Left Section (Categories) */
+.dropdown-left {
+    flex: 1; /* Takes up 1/3 of the dropdown width */
+    padding-right: 20px; /* Adds spacing between the left and right sections */
+}
+
+.dropdown-left ul {
+    list-style: none; /* Removes default bullets */
+    margin: 0; /* Removes default margins */
+    padding: 0; /* Removes default padding */
+} 
+
+.dropdown-left li {
+    font-size: 16px;
+    font-weight: bold; /* Makes category text bold */
+    margin-bottom: 140px; /* Adds spacing between categories */
+}
+
+/* Right Section (Product Columns) */
+.dropdown-right {
+    flex: 2; /* Takes up 2/3 of the dropdown width */
+    display: flex; /* Aligns product columns horizontally */
+    gap: 20px; /* Adds spacing between columns */
+}
+
+.dropdown-column {
+    flex: 1; /* Ensures equal column width */
+}
+
+.dropdown-column h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px; /* Spacing below series title */
+    color: #333; /* Dark gray text */
+}
+
+.dropdown-column ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-column li {
+    margin-bottom: 10px; /* Spacing between items */
+}
+
+.dropdown-column li a {
+    text-decoration: none; /* Removes underline */
+    color: #007BFF; /* Default link color */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.dropdown-column li a:hover {
+    color: #0056b3; /* Darker blue on hover */
+}

@@ -1,5 +1,5 @@
-/* Updated: 2025-01-15 11:22 PM EST - STABLE VERSION */
-/* Latest: Landing page mostly done; bottom contacts WIP, sticky fixed */
+/* Updated: 2025-01-20 06:44 PM EST - STABLE VERSION */
+/* Latest: Landing page done. Dropdown WIP */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -15,7 +15,8 @@ header {
     background-color: #fff; /* Removes container outline */
     box-shadow: none; /* Removes shadow */
     padding: 10px 0; /* Adjust header spacing if needed */
-/* Sticky func */
+
+    /* Sticky func */
     position: sticky; /* Makes the header sticky */
     top: 0; /* Sticks the header to the top of the viewport */
     z-index: 1000; /* Ensures the header stays above other elements */
@@ -37,7 +38,7 @@ header .container, .hero .container, .products .container, footer .container {
     background-color: #fff;
     margin-right: 20px;
     margin-right: 10px;
-    
+    z-index: 1;
 }
 
 .main-nav .logo {
@@ -117,48 +118,26 @@ header .container, .hero .container, .products .container, footer .container {
     position: relative;
 }
 
-.nav-links a { /* -A */
-    text-decoration: none;
-    color: #333;
-    padding: 10px 15px;/* same as .top-links a */
-    display: block;
+
+/* Default Styling for Dropdown Titles */
+.nav-links a {
+    text-decoration: none; /* Removes underline from links */
+    color: #000; /* Default black color */
+    font-weight: bold; /* Makes text bold */
+    padding: 10px 15px; /* Adds padding around the links */
+    display: block; /* Ensures links take up full width in the dropdown */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
 }
 
+/* Hover Effect for Dropdown Titles */
 .nav-links a:hover {
-    background-color: #e0e0e0;
-    border-radius: 5px;
+    color: #3eb4eb; /* Changes text color to #3eb4eb on hover */
+    /* text-decoration: underline; /* Optionally adds underline on hover */
 }
 
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    width: 200px;
-}
+/* Dropdown V1 used to live here lol */
 
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-.dropdown-menu li a {
-    padding: 10px;
-    color: black;
-    text-decoration: none;
-}
-
-.dropdown-menu li a:hover {
-    background-color: #f4f4f4;
-}
-
-.dropdown-arrow {
-    margin-left: 5px;
-    color: darkblue;
-}
-
+/* Sticky Nav, Search Bar */
 .sticky-nav {
     position: sticky;
     top: 0;
@@ -362,7 +341,7 @@ header .container, .hero .container, .products .container, footer .container {
 .industries {
     margin: 50px 0; /* Space around the section - can't see effect?*/
     text-align: center;
-    background: linear-gradient(to bottom, #e3e3e3, rgba(255, 255, 255, 0)); /* Light gray fading to transparent */
+    background: linear-gradient(to bottom, hsl(0, 0%, 93%), rgba(255, 255, 255, 0)); /* Light gray fading to transparent */
     padding: 50px 20px; /* Adds spacing inside the section */
     /*
     background-image: url('bkg_blue_lens_flare.jpg'); /* Sets the background image 
@@ -420,23 +399,33 @@ header .container, .hero .container, .products .container, footer .container {
     object-fit: cover; /* Ensures the image scales proportionally */
 }
 
-
-
+/* Footer w/ Social links & Terms of Service, etc. */
 footer {
-    text-align: center;
-    padding: 40px 0;
-    background-color: #f4f4f4;
-    color: #555;
+    text-align: center; /* Centers all footer content */
+    padding: 15px 0; /* Adds vertical spacing */
+    background-color: #f4f4f4; /* Optional: Light gray footer background */
+    color: #555; /* Neutral text color */
     font-size: 14px;
 }
 
-.footer-links a {
-    text-decoration: none;
-    color: #555;
-    margin: 0 15px;
+.footer-social-links {
+    margin-top: 15px; /* Adds spacing above the logos */
 }
 
-.social-icons img {
-    width: 30px;
-    margin: 0 10px;
+.social-logo {
+    display: inline-block; /* Aligns logos horizontally */
+    margin: 0 7px; /* Adds spacing between logos */
+    transition: filter 0.3s ease; /* Smooth hover effect */
 }
+
+.social-logo img {
+    width: 30px; /* Sets consistent size for the logos */
+    height: auto; /* Maintains aspect ratio */
+    filter: grayscale(0); /* Default: Full color */
+    transition: filter 0.3s ease; /* Smooth transition to grayscale */
+}
+
+.social-logo:hover img {
+    filter: grayscale(100%); /* Turns the logo fully grayscale on hover */
+}
+

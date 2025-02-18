@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Microscope Solutions</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dropdown.css">
 </head>
 <body>
-    <!-- Updated: 2025-01-15 11:22 PM EST - 
-     Latest: Landing page mostly done; bottom contacts WIP, sticky fixed   -->
-     
-    <header>
+    <!-- Updated: 2025-02-18 12:55 PM China Time - 
+     Latest: Dropdown WIP   -->
+     <header>
         <div class="container">
             <nav class="main-nav sticky-nav">
                 <a href="index.html" class="logo-container">
@@ -27,28 +27,56 @@
                     </div>
                     <ul class="nav-links">
                         <li class="dropdown">
-                            <a href="#">Products <span class="dropdown-arrow">&#9662;</span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="css/products1.html">Microscope Series</a></li>
-                                <li><a href="css/products2.html">Sensor Solutions</a></li>
-                            </ul>
+                            <a href="#" class="dropdown-toggle">Products <span class="dropdown-arrow">&#9662;</span></a>
+                            <div class="dropdown-container">
+                                <div class="dropdown-left">
+                                    <ul>
+                                        <li>Optical Metrology Machines</li>
+                                        <li>Microscope Series</li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-right">
+                                    <div class="dropdown-column">
+                                        <h3>A Series</h3>
+                                        <ul>
+                                            <li><a href="model-a5.html">Model A5</a></li>
+                                            <li><a href="model-a7.html">Model A7</a></li>
+                                            <li><a href="model-a8.html">Model A8</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="dropdown-column">
+                                        <h3>B Series</h3>
+                                        <ul>
+                                            <li><a href="model-b5.html">Model B5</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="dropdown-column">
+                                        <h3>F Series</h3>
+                                        <ul>
+                                            <li><a href="model-f5.html">Model F5</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                         <li class="dropdown">
-                            <a href="#">Solutions <span class="dropdown-arrow">&#9662;</span></a>
+                            <a href="#" class="dropdown-toggle">Solutions <span class="dropdown-arrow">&#9662;</span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="css/solutions1.html">Imaging Solutions</a></li>
-                                <li><a href="css/solutions2.html">Automation Solutions</a></li>
+                                <li><a href="nav-imaging-solutions.html" target="_blank">Imaging Solutions</a></li>
+                                <li><a href="nav-automation-solutions.html" target="_blank">Automation Solutions</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">Downloads</a></li>
-                        <li><a href="#">Support</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="nav-downloads.html">Downloads</a></li>
+                        <li><a href="nav-support.html">Support</a></li>
+                        <li><a href="nav-about-us.html">About Us</a></li>
+                        <li><a href="nav-contact-us.html">Contact Us</a></li>
                     </ul>
                 </div>
             </nav>
         </div>
+        <div class="overlay"></div> <!-- Overlay for dropdown -->
     </header>
+
 
     <main>
         
@@ -162,16 +190,19 @@
 
     <footer>
         <div class="container">
-            <div class="footer-links">
-                <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> | <a href="#">Contact</a>
+            <div class="footer-social-links">
+                <a href="https://www.linkedin.com" target="_blank" class="social-logo">
+                    <img src="linkedin-logo.png" alt="LinkedIn Logo">
+                </a>
+                <a href="https://www.wechat.com" target="_blank" class="social-logo">
+                    <img src="wechat-seeklogo.png" alt="WeChat Logo">
+                </a>
+                <p>&copy; 2025 Fermi Vision. All rights reserved.</p>
             </div>
-            <div class="social-icons">
-                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
-                <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
-                <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
-            </div>
-            <p>&copy; 2025 Tech Solutions. All Rights Reserved.</p>
         </div>
     </footer>
+    
+            
+    <script src="js/dropdown.js"></script> 
 </body>
 </html>
